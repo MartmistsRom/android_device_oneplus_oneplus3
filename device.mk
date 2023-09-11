@@ -569,3 +569,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
+
+# Inherit from MindtheGapps
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/vendor/gapps/arm64/arm64-vendor.mk)
