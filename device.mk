@@ -571,4 +571,10 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/oppo/common/common.mk)
 
 # Inherit from MindtheGapps
-$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/vendor/gapps/arm64/arm64-vendor.mk)
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+
+# Extendrom config
+ENABLE_EXTENDROM := true
+EXTENDROM_PACKAGES := Magisk
+EXTENDROM_PREROOT_BOOT := true
+$(call inherit-product-if-exists, vendor/extendrom/config/common.mk)
